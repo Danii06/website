@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Updated: 15 February 2022</title>
+    <style>
+    body { 
+    	background-color: beige;
+    	color: black;
+    	font-size: 13.7px;
+    	font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    
+    table{
+    	position:absolute;
+    	top:0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	margin: auto;
+      border-spacing: 0px;
+      
+      
+      
+      width:90%;
+    }
+    
+    @media all and (orientation:landscape)
+    {
+      table
+      {
+        height:800px;
+        width:800px;
+        
+      }
+    }
+    
+    @media all and (orientation:portrait)
+    {
+      table
+      {
+        width:90%;
+        height:auto;
+        font-size:6px;
+      }
+    }
+    
+    th{
+    height:1px;
+    }
+    td{
+      position: relative;
+      border-width:1px;
+    }
+    
+    @media all and (orientation:landscape)
+    {
+      td
+      {
+    	height:30%;
+    	width:30%;
+        
+      }
+      
+    }
+    
+    @media all and (orientation:portrait)
+    {
+      td
+      {
+    	height:0;
+    	width:30%;
+    	padding-bottom:30%;
+      }
+      
+    }
+    .cell{
+      top:0px;
+      width:100%;
+    }
+    
+    td.a{
+      border-style: hidden solid solid hidden;
+    }
+    td.b{
+      border-style: hidden solid solid solid;
+    }
+    td.c{
+      border-style: hidden hidden solid solid;
+    }
+    td.d{
+      border-style: solid solid solid hidden;
+    }
+    td.e{
+      border-style: solid solid solid solid;
+    }
+    td.f{
+      border-style: solid hidden solid solid;
+    }
+    td.g{
+      border-style: solid solid hidden hidden;
+    }
+    td.h{
+      border-style: solid solid hidden solid;
+    }
+    td.i{
+      border-style: solid hidden hidden solid;
+    }
+    </style>
+  </head>
+  <body>
+  <div style="text-align: center;">
+  <b style="font-size:20px;">Toric Tic-Tac-Toe</b>
+  </div>
+    <table>
+    
+    
+    
+    
+    <tr>
+    <td class="a">
+    <div class="cell" style="position:absolute;word-wrap: break-word;">
+    Toric Tic-tac-toe is a two-player competitive paper and pencil game based on Tic-tac-toe. 
+    <br><br> The game is played on a board of 6, 8 or 12 Tic-tac-toe grids in some circular formation, though any composite number of grids will do.
+    <br><br> The goal of the game is to be the first to produce a "loop" of game pieces.
+    <br><br> A loop consists of an equally-spaced ordering of the grids which returns to the first grid, along with an equally-spaced pattern going through the Tic-tac-toe grids which returns to its initial position at the first grid
+    </div>
+    <td class="b">
+    <div class="cell" style="position:absolute;word-wrap: break-word;"> 
+    Consider the 8-grid boards below; the first image shows two possible orderings of boards (in this case any pattern using the second ordering might be equivalent to the first ordering), the second image shows three possible winning loops using the first ordering, and the third image shows the patterns.
+    <br><br> A pattern can not be as long as the number of boards. Playing with or without the rule that patterns must be equally-spaced will yield differing possibilities for loops, and so equally-space patterns can be thought of as an optional rule.
+    
+    </div>
+    <td class="c">
+    <div class="cell" style="position:absolute;word-wrap: break-word;">
+    Further Analysis: The length of a pattern has to be divisible by the number of boards for the fastest winning loop.
+    <br><br> If the length of the pattern is coprime with the number of boards, the loop would need to traverse the grids multiple times according to the length of the pattern.
+    <br><br> However, this longer loop will have as many smaller winning loops as the length of the pattern.
+    <br><br> </div>
+    </tr>
+    
+    <tr>
+    <td class="d">
+    <div class="cell" style="position:absolute;word-wrap: break-word;"><img style="width:99%;height:100%" src="toricxo1.png"/></div>
+    <td class="e">
+    <div class="cell" style="position:absolute;word-wrap: break-word;"><img style="width:99%;height:100%" src="toricxo2real.png"/></div>
+    <td class="f">
+    <div class="cell" style="position:absolute;word-wrap: break-word;"><img style="width:99%;height:100%" src="toricxo3.png"/></div>
+    </tr>
+    
+    <tr>
+    <td class="g">
+    <div class="cell" style="position:absolute;word-wrap: break-word;">This game could probably be analysed using modulo arithmetic, the equidistribution theorem and number theory, but I do not know enough number theory.</div>
+    <td class="h">
+    <div class="cell" style="position:absolute;word-wrap: break-word;"><img style="width:99%;height:100%" src="toricxo4.png"/></div>
+    <td class="i">
+    <div class="cell" style="position:absolute;word-wrap: break-word;"></div>
+    </tr>
+    </table>
+  </body>
+</html>
