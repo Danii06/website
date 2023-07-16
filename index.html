@@ -16,6 +16,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transform: rotate();
       }
 
       @media screen and (max-width: 450px) {
@@ -26,9 +27,23 @@
     </style>
   </head>
   <body>
+    <script>
+      swap_book = function() {
+        document.getElementById("book").src="book.apng"
+        setTimeout(() => {
+          window.location.href = "/jelly.html";
+        }, 1300);
+      }
+    </script>
     <a href="websiteOld.html">
       <img class="orb" src="drop.png" />
       <img class="orb" src="fadedOrb.gif" />
     </a>
+    <img
+      style="position: absolute; width: 40vh; bottom: 0; right: 0"
+      id="book"
+      src="book.png"
+      onclick="swap_book()"
+    />
   </body>
 </html>
