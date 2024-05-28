@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spectrogram</title>
+	<style>
+		body {
+			margin: 0;
+			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+		table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		  overflow-y: auto;
+		}
+
+		canvas {
+			margin:0 0 0 0;
+		}
+
+		#table{
+			margin:0 0 0 0;
+			border: 2px solid #000000;
+			overflow-y: scroll;
+		}
+
+		td, th {
+		  border: 1px solid #dddddd;
+		  text-align: left;
+		  padding: 8px;
+		}
+		tr:nth-child(even) {
+		  background-color: #dddddd;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="table">
+		<table id="formants">
+		</table>
+	</div>
+
+	<canvas id="canvas" style="border-style: solid; border-width: 1px;"></canvas>
+	<br>
+	<div style="position:fixed; bottom: 0%;">
+		<button id="start" onclick="start()">Start</button>
+		<button onclick="log_formants()">Calculate Formants</button>
+	</div>
+	<canvas id="graph" style="border-style: solid; border-width: 1px;"></canvas>
+
+	<canvas id="ipa" style="border-style: solid; border-width: 1px; position: absolute;"></canvas>
+
+	<script src="./durand-kerner/roots.js"></script>
+	<script src="./fft.js/lib/fft.js"></script>
+	<script src="./svd-js/svd.js"></script>
+	<script src="./LPC.js"></script>
+	<script src="./IPAChart.js"></script>
+	<script src="./FormantTable.js"></script>
+	<script src="./SpectrumGraph.js"></script>
+	<script src="./Spectrogram.js"></script>
+	<script src="./Main.js"></script>
+</body>
+</html>
