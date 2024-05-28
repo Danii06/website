@@ -1,6 +1,6 @@
-importScripts('/durand-kerner/roots.js');
-importScripts('/fft.js/lib/fft.js');
-importScripts('/svd-js/svd.js');
+importScripts('/speech/durand-kerner/roots.js');
+importScripts('/speech/fft.js/lib/fft.js');
+importScripts('/speech/svd-js/svd.js');
 let audioCtx = {};
 importScripts('LPC.js');
 self.onmessage = function(e){
