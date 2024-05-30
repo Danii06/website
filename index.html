@@ -1,49 +1,31 @@
-<html>
-  <head>
-    <title>2022/12/26</title>
-    <style>
-      body {
-        background-image: url("serenity.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+<!DOCTYPE html>
+<head> 
+	<title>2024-05-30</title>
+	<style>
+		.center{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 
-      .orb {
-        width: 20vh;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transform: rotate();
-      }
+		body{
+			background-color: black;
+		}
 
-      @media screen and (max-width: 450px) {
-        body {
-          font-size: 10px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <script>
-      swap_book = function() {
-        document.getElementById("book").src="book.apng"
-        setTimeout(() => {
-          window.location.href = "/jelly.html";
-        }, 1300);
-      }
-    </script>
-    <a href="websiteOld.html">
-      <img class="orb" src="drop.png" />
-      <img class="orb" src="fadedOrb.gif" />
-    </a>
-    <img
-      style="position: absolute; width: 40vh; bottom: 0; right: 0"
-      id="book"
-      src="book.png"
-      onclick="swap_book()"
-    />
-  </body>
-</html>
+		.selectable:hover {
+			border: 5px dashed #151515;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- vgif -->
+	<a href="/speech/index.html">
+		<video autoplay loop muted class="center selectable" style="aspect-ratio: 1520 / 1318; width: 40vw;">
+			<source src="speech_analysis-cropped.mp4" type="video/mp4">
+		</video>
+	</a>
+	<a href="old_index.html" style="color: yellow; text-decoration: underline; position:absolute; bottom: 0%;"> Old site </a>
+</body>

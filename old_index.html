@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>2022/12/26</title>
+    <style>
+      body {
+        background-image: url("serenity.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .orb {
+        width: 20vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform: rotate();
+      }
+
+      @media screen and (max-width: 450px) {
+        body {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      swap_book = function() {
+        document.getElementById("book").src="book.apng"
+        setTimeout(() => {
+          window.location.href = "/jelly.html";
+        }, 1300);
+      }
+    </script>
+    <a href="websiteOld.html">
+      <img class="orb" src="drop.png" />
+      <img class="orb" src="fadedOrb.gif" />
+    </a>
+    <img
+      style="position: absolute; width: 40vh; bottom: 0; right: 0"
+      id="book"
+      src="book.png"
+      onclick="swap_book()"
+    />
+  </body>
+</html>
