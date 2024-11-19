@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Melody Generator</title>
+    <link rel="stylesheet" type="text/css" href="melody.css">
+    <script type="module" src="melody.js"></script>
+    <script type="module">
+        import { generateMelody, playNextNote, stopPlayback, importMatrix, exportMatrix } from "./melody.js";
+        document.getElementById("generate").addEventListener("click", generateMelody);
+        document.getElementById("play").addEventListener("click", playNextNote);
+        document.getElementById("stop").addEventListener("click", stopPlayback);
+        document.getElementById("export").addEventListener("click", exportMatrix);
+        document.getElementById("import").addEventListener("click", importMatrix);
+    </script>
+    
+</head>
+<body>
+    <div class="grid-container">
+        <div id="graph" class="grid-item graph">
+            <svg width="100%" height="100%"></svg>
+        </div>
+        <table id="matrix" class="grid-item matrix"></table>
+        <select id="snote">
+            <option  disabled selected>Starting Note:</option>
+            <option>I</option>
+            <option>II</option>
+            <option>III</option>
+            <option>IV</option>
+            <option>V</option>
+            <option>VI</option>
+            <option>VII</option>
+        </select>
+        <select id="mode">
+            <option  disabled selected>Select Mode:</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+            <option>F</option>
+            <option>G</option>
+            <option>A</option>
+            <option>B</option>
+            <option>Cm</option>
+            <option>Dm</option>
+            <option>Em</option>
+            <option>Fm</option>
+            <option>Gm</option>
+            <option>Am</option>
+            <option>Bm</option>
+        </select>
+        <select id="stopwhen">
+            <option disabled selected>Stop after:</option>
+            <option>Returning to start on preferred path</option>
+            <option>Returning to start</option>
+            <option>Generating 100 notes</option>
+        </select>
+        <div style="display:block;">
+        <button id="generate">Generate!</button>
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+        <button id="export">Export graph</button>
+        <button id="import">Import graph</button>
+        </div>
+        <div>
+        </div>
+        <div id="melody" class="grid-item output"></div>
+    </div>      
+</body>
+</html>
