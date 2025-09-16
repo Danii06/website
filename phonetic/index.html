@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>n Sound Trainer</title>
+</head>
+<body>
+  <h2>Guess the Sound</h2>
+  <button onclick="checkAnswer('dental')">Dental n</button>
+  <button onclick="checkAnswer('alveolar')">Alveolar n</button>
+  <button onclick="replaySound()">Replay</button>
+
+  <p id="result"></p>
+  <p>Incorrect guesses: <span id="incorrectCount">0</span></p>
+  <p>Correct guesses: <span id="correctCount">0</span></p>
+
+  <script>
+    const sounds = {
+      dental: ["dental1.mp3", "dental2.mp3", "dental3.mp3"],
+      alveolar: ["alveolar1.mp3", "alveolar2.mp3", "alveolar3.mp3"]
+    };
+
+    let currentSound = null;
+    let audio = null;
+    let incorrect = 0;
+    let correct = 0;
+
+    function playRandomSound() {
+      const categories = Object.keys(sounds);
+      const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+      const files = sounds[randomCategory];
+      const randomFile = files[Math.floor(Math.random() * files.length)];
+      currentSound = randomCategory;
+      audio = new Audio(randomFile);
+      audio.play();
+    }
+
+    function replaySound() {
+      if (audio) {
+        audio.play();
+      }
+    }
+
+    function checkAnswer(choice) {
+      if (choice === currentSound) {
+        document.getElementById("result").textContent = "Correct!";
+        correct++;
+        document.getElementById("correctCount").textContent = correct;
+      } else {
+        document.getElementById("result").textContent = "Incorrect.";
+        incorrect++;
+        document.getElementById("incorrectCount").textContent = incorrect;
+      }
+      playRandomSound();
+    }
+
+    window.onload = playRandomSound;
+  </script>
+</body>
+</html>
