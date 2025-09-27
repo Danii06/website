@@ -16,7 +16,7 @@ let matrix = [
 
 var simulation = null;
 
-const ROMAN = ['I','II','III','IV','V','VI','VII'];
+const ROMAN = ['Tonic','Supertonic','Mediant','Subdominant','Dominant','Submediant','Leading Tone'];
 const NOTES = ['C','D','E','F','G','A','B'];
 
 const RAINBOW = ['#eb7c72','#ea9f6f','#e1cd6a','#b2d18b','#b0d7d6','#b5add4','#e0b6dc'];
@@ -48,20 +48,20 @@ let AMinor = ['A4', 'B4', 'C5', 'D5', 'E5', 'F5', 'G5'];
 let BMinor = ['B4', 'C#5', 'D5', 'E5', 'F#5', 'G5', 'A5'];
 
 let keys = {
-    'C': CMajor,
-    'D': DMajor,
-    'E': EMajor,
-    'F': FMajor,
-    'G': GMajor,
-    'A': AMajor,
-    'B': BMajor,
-    'Cm': CMinor,
-    'Dm': DMinor,
-    'Em': EMinor,
-    'Fm': FMinor,
-    'Gm': GMinor,
-    'Am': AMinor,
-    'Bm': BMinor,
+    'C Major': CMajor,
+    'D Major': DMajor,
+    'E Major': EMajor,
+    'F Major': FMajor,
+    'G Major': GMajor,
+    'A Major': AMajor,
+    'B Major': BMajor,
+    'C Minor': CMinor,
+    'D Minor': DMinor,
+    'E Minor': EMinor,
+    'F Minor': FMinor,
+    'G Minor': GMinor,
+    'A Minor': AMinor,
+    'B Minor': BMinor,
 }
 
 let noteToText = {
@@ -211,7 +211,7 @@ const createGraph = function(){
     .attr('y', d => d.y)
     .attr('dy', 7)
     .attr('text-anchor', 'middle')
-    .text(d => ROMAN[d.id]);
+    .text(d => d.id);
 
     node.call(d3.drag()
     .on("start", dragstarted)
@@ -302,8 +302,8 @@ export function generateMelody(){
 
     currentKey = document.getElementById("mode").value;
 
-    if(currentKey == 'Select Mode:'){
-        alert("Choose a mode!")
+    if(currentKey == 'Select Key:'){
+        alert("Choose a key!")
         return;
     }
 

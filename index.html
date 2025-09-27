@@ -18,15 +18,40 @@
 			cursor: pointer;
 		}
 
+		.selectable {
+			border: 5px dashed black;
+		}
+
+		.grid {
+			display: grid;
+			grid-template-areas: 
+				"video lebanese"
+				"video melody";
+		}
+
+		.grid * {
+			padding: 10px;
+		}
+
 	</style>
 </head>
 <body>
-	<!-- vgif -->
-	<a href="/speech/index.html">
-		<video autoplay loop muted class="center selectable" style="aspect-ratio: 1520 / 1318; width: 40vw;">
-			<source src="speech_analysis-cropped.mp4" type="video/mp4">
-		</video>
-	</a>
+	<div class="grid center">
+		<!-- vgif -->
+		<a href="/speech/index.html" style="grid-area: video">
+			<video autoplay loop muted class="selectable" style="aspect-ratio: 1520 / 1318; width: 40vw; grid-area: video;">
+				<source src="speech_analysis-cropped.mp4" type="video/mp4">
+			</video>
+		</a>
+
+		<a href="/lebanese/index.html" style="grid-area: lebanese">
+			<img src="lebanese/LebaneseFlag.gif" class="selectable" style="aspect-ratio: 4 / 3; width: 10vw; grid-area: lebanese;">
+		</a>
+
+		<a href="/melody/index.html" style="grid-area: melody">
+			<img src="notes.gif" class="selectable" style="aspect-ratio: 4 / 3; width: 10vw; grid-area: melody;">
+		</a>
+	</div>
 
 	<div style="text-align:center;position:fixed;width:100%;bottom:0px;"> 
 		<a href="https://danii.fi"><img src="daniifi8831.gif" style="display:inline-block"></a>
