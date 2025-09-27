@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head>
+    <title>Lebanese Grammar</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0 0;
+            background-color: #C30B16;
+            --overlap: 20%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            position: relative;
+            height:100%;
+            padding: 0;
+            margin: 0;
+            background-color: #C30B16;
+        }
+
+        header img {
+            display: block;
+            float: left;
+            width: 20%;
+            height: auto;
+            position: relative;
+        }
+
+        #headerimg1 {
+            z-index: 4;
+            transform: translateX(calc(var(--overlap) * 2));
+            mask-image: linear-gradient(to right, black calc(100% - var(--overlap)), transparent 100%);
+            mask-composite: add;
+        }
+
+        #headerimg2 {
+            z-index: 3;
+            transform: translateX(calc(var(--overlap) * 1));
+            mask-image: linear-gradient(to right, black calc(100% - var(--overlap)), transparent 100%);
+            mask-composite: add;
+        }
+
+        #headerimg3 {
+            z-index: 2;
+            transform: translateX(calc(var(--overlap) * 0));
+            mask-image: linear-gradient(to right, black calc(100% - var(--overlap)), transparent 100%);
+        }
+
+        #headerimg4 {
+            z-index: 1;
+            transform: translateX(calc(var(--overlap) * -1));
+            mask-image: linear-gradient(to right, black calc(100% - var(--overlap)), transparent 100%);
+        }
+
+        #headerimg5 {
+            z-index: 0;
+            transform: translateX(calc(var(--overlap) * -2));
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+            padding: 0;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            z-index: 5;
+            position: relative; 
+            transform: translateY(-50%); 
+            font-size: 3vw;
+        }
+
+        .DText {
+            font-family: Garamond, serif;
+            line-height: 1em;
+            color: #fff9d6;
+            font-weight: bold;
+            font-size: 4.5vw;
+            text-shadow: 0px 0px 0 rgb(208,208,208),1px 0px 0 rgb(162,162,162),2px 0px 0 rgb(115,115,115),3px 0px 0 rgb(68,68,68), 4px 0px 0 rgb(21,21,21),5px 0px 4px rgba(0,0,0,1),5px 0px 1px rgba(0,0,0,0.5),0px 0px 4px rgba(0,0,0,.2);
+        }
+
+
+        main {
+            position: relative;
+            margin: 0 auto;
+            padding: 0 0;
+            width: 84.2%;
+            transform: translateY(-3vw);
+            background-color: white;
+            overflow:hidden;
+
+        }
+
+        nav {
+            background-color: #FCECC9;
+            padding: 10px;
+        }
+
+        nav details {
+            margin-bottom: 8px;
+            color: #000080;
+            user-select: none;
+            font-size: 16px;
+        }
+
+        nav summary {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 8px;
+            background: #f8d9a0;
+            border-radius: 4px;
+        }
+
+        nav a {
+            display: block;
+            padding: 6px 12px;
+            margin-left: 10px;
+            text-decoration: none;
+            border-left: 2px solid #cba86b;
+        }
+
+        nav a:hover {
+            background: #f0c97f;
+        }
+
+        article {
+            grid-area: content;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: #f8f9fa;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        tr {
+            border: 1px solid black;
+        }
+        
+        th {
+            padding: 10px;
+            text-align: center;
+            border-right: 1px solid black;
+        }
+
+    </style>
+    <script>
+        // window.onload = () => {
+        //     document.querySelectorAll("nav details").forEach((detail) => {
+        //         console.log(detail)
+        //         detail.addEventListener("click", () => {
+        //             document.querySelectorAll("nav details").forEach((otherDetail) => {
+        //                 if (otherDetail !== detail) {
+        //                     otherDetail.removeAttribute("open");
+        //                 }
+        //             });
+        //         });
+        //     });
+        // };
+    </script>
+</head>
+<body>
+    <header>
+        <img id="headerimg1" src="JeitaGrotto.jpg" alt="Jeita Grotto">
+        <img id="headerimg2" src="AlAminStGeorge.jpg" alt="Al Amin Mosque St George Church">
+        <img id="headerimg3" src="BacchusTemple.jpg" alt="Temple of Bacchus">
+        <img id="headerimg4" src="RaoucheRock.jpg" alt="Raouche Rock">
+        <img id="headerimg5" src="CedarsOfGods.jpg" alt="Cedars of God">
+        <img src="LebaneseFlag.gif" alt="Lebanese Flag" style="position: absolute; left: 20%; top: 20%; z-index: 5; width:10%; height:auto;">
+        <h1 class="DText">Lebanese Grammar</h1>
+    </header>
+    <main>
+        <nav>
+            <details open>
+                <summary>Introduction</summary>
+                <a href="#Welcome">Home</a>
+            </details>
+
+            <details open>
+                <summary>Lorem</summary>
+                <a href="">Lorem</a>
+                <a href="">Ipsum</a>
+            </details>
+
+            <details open>
+                <summary>Ipsum</summary>
+                <a href="">Dolor</a>
+                <a href="">Sit</a>
+            </details>
+
+            <details open>
+                <summary>Dolor</summary>
+                <a href="">Amet</a>
+                <a href="">Consectetur</a>
+            </details>
+
+            <details open>
+                <summary>Sit</summary>
+                <a href="">Adipiscing</a>
+                <a href="">Elit</a>
+                <a href="">Ut</a>
+            </details>
+        </nav>
+        <article>
+            <h2 id="Welcome">(Very WIP) Welcome to Lebanese Grammar!</h2>
+            <p> These notes consist of a very idiosyncratic and non-traditional exposition to the grammar of my specific idiolect of the Lebanese variety of Arabic, which grew out of attempts to teach this dialect (hereafter referred to as simply <b>Lebanese</b>) to my wife. </p>
+            <p> Since Lebanese is a spoken language, there is no standardized written form, nor a consistent orthography for any of the unofficial writing systems. These notes will use a modified version of the <a href="https://en.wikipedia.org/wiki/Arabic_chat_alphabet">Arabic Chat Alphabet</a> where spelling is made to match the phonemic transcription of the language, as well as the Arabic script where applicable. Being a spoken language has also led these notes to take an interactive spoken approach to the grammar, where the reader is encouraged to discover these rules on their own through the provided audio examples before reading the presented explanations. </p>
+            <h2 id="PossessiveSuffixes"> Possessive Suffixes </h2>
+            <table lang="apc-Latn-LB">
+                <tr>
+                    <th style="text-align: center;" colspan="7"> Noun ending in -e (-t) </th>
+                </tr>
+                <tr> 
+                    <td rowspan="2" style="text-align: justify;">
+                        <div style="font-size: 23px; text-align: right;">سمكة</div>
+                        <br>
+                        <div style="text-align: left;">Samke</div>
+                    </td>
+                    <th colspan="3"> Singular </th>
+                    <th colspan="3"> Plural </th>
+                </tr>
+                <tr>
+                    <th> First Person </th>
+                    <th> Second Person </th>
+                    <th> Third Person </th>
+                    <th> First Person </th>
+                    <th> Second Person </th>
+                    <th> Third Person </th>
+                </tr>
+                <tr>
+                    <th> Masculine </th>
+                    <td rowspan="2"> Samk<span style="color: gray">e</span>t<span style="color: gray">n</span>e </td>
+                    <td> Samk<span style="color: gray">e</span>tak </td>
+                    <td> Samk<span style="color: gray">e</span>to </td>
+                    <td rowspan="2"> Samketna </td>
+                    <td rowspan="2"> Samketkon </td>
+                    <td rowspan="2"> Samk<span style="color: gray">e</span>ton </td>
+                </tr>
+                <tr>
+                    <th> Feminine </th>
+                    <td> Samk<span style="color: gray">e</span>tik </td>
+                    <td> Samk<span style="color: gray">e</span>ta </td>
+                </tr>
+            </table>
+        </article>
+    </main>
+</body>
+</html>
